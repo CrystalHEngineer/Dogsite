@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Emory and Ivan's Pet Store
+    </h1>
+    <h2>
+        Categories:
+    </h2>
+    <div class="dropdown">
+        {% for food in type %}
+            <div>
+                <a href=>
+                    {{ food.name }}
+                </a>
+                <p>{{ food.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <h2>
+        Company:
+    </h2>
+    <div class="dropdown">
+        {% for brand in brands %}
+            <div>
+                <p>
+                    {{ brand.name }}
+                </p>
+                <p>
+                    {{ brand.description }}
+                </p>
+                <p>{{ brand.duration }}</p>
+                
+            </div>
+        {% endfor %}
+    </div>
+    <h2>
+        Products:
+    </h2>
+    <div class="dropdown">
+        {% for products in item %}
+           <div>
+               {{ products.name }}
+           </div>
+           <div>
+            {{ products.price }}
+        </div>
+        <div>
+            {{ products.ingredients }}
+        </div>
+        <div>
+            {{ products.sale }}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
